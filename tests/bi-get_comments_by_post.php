@@ -33,7 +33,6 @@ try {
         }
         echo "Total: " . $comments->count() . " commentaire(s)\n";
     }
-
 } catch (Exception $e) {
     echo "Une erreur s'est produite : " . $e->getMessage() . "\n";
-} 
+}

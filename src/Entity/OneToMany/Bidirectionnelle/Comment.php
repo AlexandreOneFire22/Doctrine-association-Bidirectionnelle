@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Entity\OneToMany\Bidirectionnelle;
+
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
@@ -22,7 +23,7 @@ class Comment
     private string $contenu;
 
     #[ORM\ManyToOne(targetEntity: Post::class, inversedBy: "comments")]
-    #[ORM\JoinColumn(name: "post_id", referencedColumnName: "id_post", nullable: true)]
+    #[ORM\JoinColumn(name: "post_id", nullable: false)]
     private Post $post;
 
     public function getId(): int
@@ -70,4 +71,4 @@ class Comment
         $this->post = $post;
         return $this;
     }
-} 
+}

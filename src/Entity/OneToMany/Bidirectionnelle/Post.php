@@ -48,6 +48,11 @@ class Post
         return $this->id;
     }
 
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
     public function getTitre(): string
     {
         return $this->titre;

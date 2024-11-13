@@ -25,9 +25,9 @@ $configuration = ORMSetup::createAttributeMetadataConfiguration($path,$isDevMode
 $configurationBD = [
   'driver' => 'pdo_mysql',
   'user' => 'root',
-  'password' => 'root',
+  'password' => '',
   'dbname' => 'db_doctrine',
-  'host' => '127.0.0.1:8889'
+  'host' => 'localhost'
 ];
 
 // Créer de la connexion à la base de données
